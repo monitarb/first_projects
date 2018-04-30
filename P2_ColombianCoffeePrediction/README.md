@@ -4,7 +4,7 @@
 [1. Project Overview](#section-a)  
 [2. Actions](#section-b)  
 [3. Results](#section-c)  
-[4. Repository Structure](#section-d)
+[4. Repository Structure](#section-d)  
 [5. Sources](#section-e)
 
 
@@ -60,15 +60,15 @@ In general this are the analysed features along with their importance according 
 * **/src** : Sorce Folder.  Contains all the scripts used for this analysis with their comment and order.  There is also the spider script used for webScraping in the Extraction process
 * **/csv** : .csv File Folder.  Contains all csv files used for this analysis: Spurce files, temporary files and final files to avoid reloading and transforming data everytime
 * **/graphs** : Image Folder.  Contains all images, plots and MVPs produced during this analysis
-* Main Folder: Project Presentation, summary of process, discoveries and link to GitHub repository
+* **Main Folder**: Project Presentation, summary of process, discoveries and link to GitHub repository
 
 
 ## <a name="section-e"></a>5.  Sources
-* Weather Underground [www.wunderground.com]:  Weather Data from Quindio, Caldas and Risaralda, Colombia (Retrieved 18-04-2018)
+* Weather Underground [www.wunderground.com](www.wunderground.com):  Weather Data from Quindio, Caldas and Risaralda, Colombia (Retrieved 18-04-2018)
 
 
-* Colombian Coffee Growers Organization [www.federaciondecafeteros.org] Coffee Information and Photos (Retrieved 19-04-2018 - 26-06-2018)
+* Colombian Coffee Growers Organization [www.federaciondecafeteros.org](www.federaciondecafeteros.org) Coffee Information and Photos (Retrieved 19-04-2018 - 26-06-2018)
 
 
-* International Coffee Organization [www.ico.org] Coffee Information (Retrieved 19-04-2018)
+* International Coffee Organization [www.ico.org](www.ico.org) Coffee Information (Retrieved 19-04-2018)
 
