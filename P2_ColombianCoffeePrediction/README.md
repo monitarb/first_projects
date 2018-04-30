@@ -64,11 +64,11 @@ In general this are the analysed features along with their importance according 
 
 
 ## <a name="section-e"></a>5.  Sources
-* Weather Underground [www.wunderground.com](www.wunderground.com):  Weather Data from Quindio, Caldas and Risaralda, Colombia (Retrieved 18-04-2018)
+* Weather Underground (www.wunderground.com):  Weather Data from Quindio, Caldas and Risaralda, Colombia (Retrieved 18-04-2018)
 
 
-* Colombian Coffee Growers Organization [www.federaciondecafeteros.org](www.federaciondecafeteros.org) Coffee Information and Photos (Retrieved 19-04-2018 - 26-06-2018)
+* Colombian Coffee Growers Organization (www.federaciondecafeteros.org) Coffee Information and Photos (Retrieved 19-04-2018 - 26-06-2018)
 
 
-* International Coffee Organization [www.ico.org](www.ico.org) Coffee Information (Retrieved 19-04-2018)
+* International Coffee Organization (www.ico.org) Coffee Information (Retrieved 19-04-2018)
 
