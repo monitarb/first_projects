@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GOT - Who's Next?</title>
+    <style>
+        body {
+            background-image: url("http://images.all-free-download.com/images/graphiclarge/nostalgic_blue_background_06_hd_pictures_169782.jpg");
+            font-size: 15px;
+            color: #ffffff;
+            font-family : Arial;
+        }
+        table, td, tr, th {
+            border: 1px solid white;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+<img src="http://www.takcolombia.com/valar_GOT.png" alt="Titulo" style="width:650px;height:120px;">
+
+  <table style="width:100%"><div line-height:1.6;>
+      <tr align="center">
+          <td colspan="4">
+              <h1>
+              <form action="/predict">
+                  <img src="http://www.takcolombia.com/SELECT.png" alt="Titulo" style="width:20%;height:20%;">
+                  <br>
+                <select name="selected_name" style="width:303px;line-height:50px;font-size:15px" size:"5">
+                  {% for n in character_names %}
+                      <option value="{{ n }}">{{ n }}</option>
+                  {% endfor %}
+                </select>
+                <br>
+                <input type="submit" value="Submit" method="get" style="width:150px;height:30px;background-color:#A52A2A;color:white;">
+
+              </form>
+              </h1>
+          </td>
+      </tr>
+      <tr>
+           <td rowspan="2">
+               <p style="line-height:1.35">
+                {% for f in feature_names %}
+                   {{ f }} : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{ character_features[f] }}</b>
+                   <br>
+                  {% if f == 'total_viewers' or f == 'culture_bk[T.Wildl]' %}
+                       </p></td><td rowspan="2"><p style="line-height:1.35">
+                  {% endif%}
+                {% endfor%}
+          </p>
+           </td>
+      </tr>
+      <tr>
+          <td font-size: 20px>
+              <div align="center">
+              <h1>
+                {% if prediction %}
+                  NAME: <br> {{selected_name}} <br><br>
+                  PREDICTION: <br> {{ prediction*200 }}&nbsp;%
+                {% endif%}
+              </h1>
+              </div>
+          </td>
+      </tr>
+      </div>
+    </table>
+    </div>
+</body>
+
+</html>
