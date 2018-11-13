@@ -1,10 +1,11 @@
-# ArtRecommender. 
+# ArtRecommender 
 
 # Table of Contents
 [1. Project Overview](#section-a)  
 [2. Actions](#section-b)  
 [3. Results](#section-c)  
-[4. Summary of insights](#section-d)  
+[4. Repository Structure](#section-d)  
+[5. Sources](#section-e)
 
 
 ---
@@ -31,7 +32,7 @@ Used list of URLs of more than 75k works of art from [MET Museum's GitHub](https
 6. If own Word2Vec translator doesn't work, use [MUSE](https://github.com/facebookresearch/MUSE) predefined Word Vectors and build only one topic model in English
 
 7. Use the results from the unified model to build a content based Recommender System from works of art from one museum to the other
-### Tools Used: Python, Pandas, BeautifulSoup, nltk, scikit-learn
+**Tools Used: Python, Pandas, BeautifulSoup, nltk, scikit-learn**
 
 
 ---
@@ -46,20 +47,29 @@ Used list of URLs of more than 75k works of art from [MET Museum's GitHub](https
 
 3. **Topic Match:**  One on one topic match did not work due to Religion/Chinese topic on Met and the lack of objects (Jewelry, Dress, China) in Museum of Prado
 
+### Word2Vec Translator
+1. **Personalized Word2Vec:** Created a Word Vector Space inside the "Art" context, but due to low data volume or unbalanced documents between English-Spanish, it didn't behave as well as preexisting Word Vectors
+2. **Best match found: [MUSE](https://github.com/facebookresearch/MUSE)**  was used to translate descriptions from Prado Museum (Spanish) into english
+3. **A new topic Model was built:** Using 37 unlabeled topics.  Labels were no longer needed, since we don't want to match between museums anymore.  Separation (Inertia) between topics seems to improve due to the new English-translated data. (i.e: Religion/Chinese group was finally separated thanks to the amount of religious data given by Prado Museum)
 
-### Day of the Week Recommendation:
-![Daily](graphs/Wkdy_Wknd.png)
-
-### Top 15 Recommendations:
-![Top15](graphs/Top15Stations.png)
-
-### Time/Hour Recommendation:
-![Hourly](graphs/116%20ST.png)
+### Recommender System:
+Using the probabilities to belong to each ef the 37 topics as attributes, a Recommeder System based on contents was built, using Cosine Distance. A filter by artist was used to avoid obvious recommendations  
+Results from the Recommender Systems were satisfactory, inside one museums and across museums.  Recommendations were not limited to type (Painting, Ceramic, Painted, glass), artist, year or museum classification.
 
 
-## <a name="section-d"></a>4.  Summary of insights
-1. Top 15 Stations (3%) cover 13.5% of foot traffic
-2. Stations near Universities and Tech hubs present opportunity for  outreach and awareness. 
-3. Stations classified as high per capita income present opportunities for fundraising. 
-4. Weekdays mornings not recommended.
-5. Overall stations are better targeted between 4-8pm
+## <a name="section-d"></a>4.  Repository Structure
+* **/src** : Sorce Folder.  Contains all the scripts used for this analysis with their comment and order.
+* **/files** : Temporary File Folder.  Contains all files generated during this analysis to avoid reloading and transforming data everytime
+* **/MetFiles** : Descriptions scraped from [MET](https://www.metmuseum.org/) 
+* **/PradoFiles** : Descriptions scraped from [Museo del Prado](https://www.museodelprado.es/)
+* **/utils** : Contains all thrird party files used in this analysis: Chrome Driver for iOS, stop words in spanish, word Vectors dwloaded from [MUSE](https://github.com/facebookresearch/MUSE), etc.
+* **Main Folder**: Project Presentation, summary of process, discoveries and link to GitHub repository
+
+
+## <a name="section-e"></a>5.  Sources
+* MET Museum GitHub (https://github.com/metmuseum/openaccess):  Main attibutes from works of art including URL to official website, NOT including description (Retrieved 20-05-2018)
+* MET Museum Official Website (https://www.metmuseum.org/): Description from the works of art in the URLs retrieved from GitHub (Scrapped 20-05-2018) 
+* Museo del Prado Official Website (https://www.museodelprado.es/): Description from the works of art in the Main page - Full collection (Scrapped 22-05-2018) 
+* Multilingual Unsupervised or Supervised word Embeddings [MUSE](https://github.com/facebookresearch/MUSE): A. Conneau*, G. Lample*, L. Denoyer, MA. Ranzato, H. Jégou, Word Translation Without Parallel Data (Retrieved 20-05-2018)
+* Stop-Word-ISO (https://github.com/stopwords-iso): Stop word list in spanish (Retrieved 21-05-2018)
+
