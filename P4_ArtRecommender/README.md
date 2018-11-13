@@ -56,6 +56,7 @@ Used list of URLs of more than 75k works of art from [MET Museum's GitHub](https
 Using the probabilities to belong to each ef the 37 topics as attributes, a Recommeder System based on contents was built, using Cosine Distance. A filter by artist was used to avoid obvious recommendations  
 Results from the Recommender Systems were satisfactory, inside one museums and across museums.  Recommendations were not limited to type (Painting, Ceramic, Painted, glass), artist, year or museum classification.
 
+---
 
 ## <a name="section-d"></a>4.  Repository Structure
 * **/src** : Sorce Folder.  Contains all the scripts used for this analysis with their comment and order.
@@ -66,6 +67,7 @@ Results from the Recommender Systems were satisfactory, inside one museums and a
 * **/models** : Models generated in this analysis for Prado only, MET only, Word2Vec and final
 * **Main Folder**: Project Presentation, summary of process, discoveries and link to GitHub repository
 
+---
 
 ## <a name="section-e"></a>5.  Sources
 * MET Museum GitHub (https://github.com/metmuseum/openaccess):  Main attibutes from works of art including URL to official website, NOT including description (Retrieved 20-05-2018)
