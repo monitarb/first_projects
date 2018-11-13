@@ -63,6 +63,7 @@ Results from the Recommender Systems were satisfactory, inside one museums and a
 * **/MetFiles** : Descriptions scraped from [MET](https://www.metmuseum.org/) 
 * **/PradoFiles** : Descriptions scraped from [Museo del Prado](https://www.museodelprado.es/)
 * **/utils** : Contains all thrird party files used in this analysis: Chrome Driver for iOS, stop words in spanish, word Vectors dwloaded from [MUSE](https://github.com/facebookresearch/MUSE), etc.
+* **/models** : Models generated in this analysis for Prado only, MET only, Word2Vec and final
 * **Main Folder**: Project Presentation, summary of process, discoveries and link to GitHub repository
 
 
